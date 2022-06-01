@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { boardDefault } from '../Equations'
-import Number from './Number'
+import React from 'react';
+import Number from './Number';
 
 export default function Board() {
      
