@@ -21,12 +21,15 @@ function App() {
     setCurrAttempt({...currAttempt, numberPos: currAttempt.numberPos-1});
   }
 
-  const onSelectNumber = (keyVal) => {
+  const onSelectNumber = (key) => {
     if (currAttempt.numberPos > 7) return;
     const newBoard = [...board];
-    newBoard[currAttempt.attempt][currAttempt.numberPos] = keyVal;
+    newBoard[currAttempt.attempt][currAttempt.numberPos] = key;
     setBoard(newBoard);
-    setCurrAttempt({...currAttempt, numberPos: currAttempt.numberPos+1});
+    setCurrAttempt({
+      attempt: currAttempt.attempt, 
+      numberPos: currAttempt.numberPos+1,
+    });
   }
 
   const onEnter = () => {

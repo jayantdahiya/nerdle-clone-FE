@@ -4,14 +4,20 @@ import { AppContext } from '../App';
 function Key({keyVal, bigKey}) {
     const {onEnter, onDelete, onSelectNumber} = useContext(AppContext);
 
+    
     const selectNumber = () =>{
-        if(keyVal === "ENTER"){
+        if(keyVal === "ENTER")
+        {
             onEnter();
-        } else if(keyVal ==="DELETE") {
+        } else if(keyVal ==="DELETE") 
+        {
             onDelete();
-        } else {
-        onSelectNumber(keyVal);
-    }};
+        } else 
+        {
+            onSelectNumber(keyVal);
+        }
+    }
+
   return (
     <div className='key' id={bigKey && "big"} onClick={selectNumber}>
         {keyVal}

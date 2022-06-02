@@ -8,11 +8,12 @@ function Number({ numberPosition, attemptValue}) {
 
     const correct = correctEquation[numberPosition] === number;
     const almost = !correct && number !== "" && correctEquation.includes(number);
+
     const numberState = currAttempt.attempt > attemptValue &&
      (correct ? "correct" : almost ? "almost" : "error");
   return (
     <div className='number' 
-     id={numberState}
+      id={numberState}
     >
       {number}
       </div>
